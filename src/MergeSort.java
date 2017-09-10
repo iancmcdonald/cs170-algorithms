@@ -38,10 +38,10 @@ class MergeSort {
         ArrayList<T> result = new ArrayList<>();
         if (x.get(0).compareTo(y.get(0)) == 0 || x.get(0).compareTo(y.get(0)) < 0) {
             result.add(x.get(0));
-            result.addAll(merge(x.subList(1, x.size()), y));
+            result.addAll(merge(x.subList(1, k), y));
         } else {
             result.add(y.get(0));
-            result.addAll(merge(x, y.subList(1, y.size())));
+            result.addAll(merge(x, y.subList(1, l)));
         }
         return result;
     }
